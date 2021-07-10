@@ -150,6 +150,9 @@ const List_Video = ({navigation}) => {
       </View>
 
       {/* การ์ตูน */}
+      <View style={{justifyContent: 'center', alignItems: 'center'}}>
+      <Text style={{color: "white", ...FONTS.h2, marginTop: 5, fontWeight: 'bold',}}>การ์ตูน</Text>
+      </View>
       <View
         style={{
           backgroundColor: 'black',
