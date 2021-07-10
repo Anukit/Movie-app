@@ -13,7 +13,7 @@ import {
   Alert,
 } from "react-native";
 import { images, icons, COLORS, FONTS, SIZES } from "../constants";
-import { Icon } from "react-native-elements/dist/Icon";
+import { Icon } from "react-native-elements/dist/icons/Icon";
 import Video from "react-native-video";
 
 const Videos = ({ navigation }) => {

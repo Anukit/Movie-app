@@ -14,7 +14,7 @@ import {
   Icon,
 } from "react-native";
 // screens
-import { Home, Videos } from "./screens/";
+import { Home, Videos, List_Video } from "./screens/";
 // tab ด้านล่าง
 import Tabs from "./navigation/tabs";
 
@@ -34,11 +34,13 @@ const App = () => {
       <Stack.Navigator
         screenOptions={{
           headerShown: false,
+          animationEnabled: true
         }}
         initialRouteName={"Home"}
       >
         <Stack.Screen name="Home" component={Home} />
         <Stack.Screen name="Videos" component={Videos} />
+        <Stack.Screen name="List_Video" component={List_Video} />
       </Stack.Navigator>
     </NavigationContainer>
   );
