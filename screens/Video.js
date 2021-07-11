@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 import {
   StyleSheet,
   View,
@@ -11,17 +11,17 @@ import {
   TextInput,
   Button,
   Alert,
-} from "react-native";
-import { images, icons, COLORS, FONTS, SIZES } from "../constants";
-import { Icon } from "react-native-elements/dist/icons/Icon";
-import Video from "react-native-video";
+} from 'react-native';
+import {images, icons, COLORS, FONTS, SIZES} from '../constants';
+import {Icon} from 'react-native-elements/dist/icons/Icon';
+import Video from 'react-native-video';
 
-const Videos = ({ navigation }) => {
+const Videos = ({navigation}) => {
   /* คอมเมนต์คนอื่น */
   const [newMovies, setnewMovies] = React.useState([
     {
       id: 0,
-      name: "Mr. John Haron",
+      name: 'Mr. John Haron',
       img: images.newmovie1,
       score: icons.five_star,
       comment:
@@ -29,7 +29,7 @@ const Videos = ({ navigation }) => {
     },
     {
       id: 1,
-      name: "Mr. John Haron",
+      name: 'Mr. John Haron',
       img: images.newmovie2,
       score: icons.five_star,
       comment:
@@ -37,7 +37,7 @@ const Videos = ({ navigation }) => {
     },
     {
       id: 2,
-      name: "Mr. John Haron",
+      name: 'Mr. John Haron',
       img: images.newmovie3,
       score: icons.five_star,
       comment:
@@ -45,7 +45,7 @@ const Videos = ({ navigation }) => {
     },
     {
       id: 3,
-      name: "Mr. John Haron",
+      name: 'Mr. John Haron',
       img: images.newmovie4,
       score: icons.four_star,
       comment:
@@ -53,7 +53,7 @@ const Videos = ({ navigation }) => {
     },
     {
       id: 4,
-      name: "Mr. John Haron",
+      name: 'Mr. John Haron',
       img: images.newmovie4,
       score: icons.four_star,
       comment:
@@ -61,7 +61,7 @@ const Videos = ({ navigation }) => {
     },
     {
       id: 5,
-      name: "Mr. John Haron",
+      name: 'Mr. John Haron',
       img: images.newmovie4,
       score: icons.four_star,
       comment:
@@ -72,11 +72,10 @@ const Videos = ({ navigation }) => {
     return (
       <View
         style={{
-          flexDirection: "row",
+          flexDirection: 'row',
           marginLeft: 15,
           marginVertical: SIZES.base,
-        }}
-      >
+        }}>
         <Image
           source={item.img}
           resizeMode="cover"
@@ -86,9 +85,9 @@ const Videos = ({ navigation }) => {
             borderRadius: 30,
           }}
         />
-        <View style={{ marginLeft: 10 }}>
-          <View style={{ flexDirection: "row" }}>
-            <Text style={{ color: "white", fontWeight: "bold" }}>
+        <View style={{marginLeft: 10}}>
+          <View style={{flexDirection: 'row'}}>
+            <Text style={{color: 'white', fontWeight: 'bold'}}>
               {item.name}
             </Text>
             <Image
@@ -102,38 +101,35 @@ const Videos = ({ navigation }) => {
               }}
             />
           </View>
-          <Text style={{ color: "white" }}>{item.comment}</Text>
+          <Text style={{color: 'white'}}>{item.comment}</Text>
         </View>
       </View>
     );
   }
 
   return (
-    <SafeAreaView style={{ flex: 1, backgroundColor: "black" }}>
+    <SafeAreaView style={{flex: 1, backgroundColor: 'black'}}>
       {/* Header */}
-      <View style={{ flexDirection: "row", height: 60 }}>
+      <View style={{flexDirection: 'row', height: 60}}>
         <Text
           style={{
-            color: "white",
+            color: 'white',
             marginTop: 15,
             marginLeft: 10,
             fontSize: 20,
-            fontWeight: "bold",
+            fontWeight: 'bold',
           }}
           onPress={() => {
-            navigation.navigate("Home");
-          }}
-        >
+            navigation.navigate('Home');
+          }}>
           Movies
         </Text>
 
-        <Text style={{ color: "red", marginTop: 7, fontWeight: "bold" }}>
-          TH
-        </Text>
+        <Text style={{color: 'red', marginTop: 7, fontWeight: 'bold'}}>TH</Text>
 
         <View style={styles.sectionStyle}>
           <TextInput
-            style={{ flex: 1, color: "white" }}
+            style={{flex: 1, color: 'white'}}
             placeholder="Search"
             placeholderTextColor="#CACACA"
           />
@@ -143,25 +139,24 @@ const Videos = ({ navigation }) => {
             color="#CACACA"
             size={20}
             onPress={() => {
-              console.log("Focus on pressed");
+              console.log('Focus on pressed');
             }}
           />
         </View>
         <View
           style={{
             flex: 1,
-            alignItems: "flex-end",
-            justifyContent: "center",
+            alignItems: 'flex-end',
+            justifyContent: 'center',
             marginRight: 10,
-          }}
-        >
+          }}>
           <Icon
             name="person"
             type="Ionicons"
             color="#CACACA"
             size={30}
             onPress={() => {
-              console.log("Focus on pressed");
+              console.log('Focus on pressed');
             }}
           />
         </View>
@@ -171,30 +166,29 @@ const Videos = ({ navigation }) => {
       <View style={styles.container}>
         <Video
           source={{
-            uri: "http://d23dyxeqlo5psv.cloudfront.net/big_buck_bunny.mp4",
+            uri: 'http://d23dyxeqlo5psv.cloudfront.net/big_buck_bunny.mp4',
           }}
           resizeMode="cover"
           style={StyleSheet.absoluteFill}
         />
       </View>
 
-      <ScrollView style={{ flex: 1 }}>
+      <ScrollView style={{flex: 1}}>
         <View>
           {/* ชื่อหนัง */}
           <View style={styles.boxText}>
             <Text style={styles.titleText}>Big Buck Bunny</Text>
             <View
               style={{
-                position: "absolute",
+                position: 'absolute',
                 bottom: 10,
                 right: 0,
-                flexDirection: "row",
+                flexDirection: 'row',
                 paddingHorizontal: SIZES.base,
                 /* backgroundColor: "black", */
                 /* borderTopLeftRadius: 10, */
                 /* borderBottomLeftRadius: 10, */
-              }}
-            >
+              }}>
               <Image
                 source={icons.star}
                 resizeMode="contain"
@@ -205,7 +199,7 @@ const Videos = ({ navigation }) => {
                   marginEnd: 5,
                 }}
               />
-              <Text style={{ color: COLORS.white, ...FONTS.body4 }}>4.8</Text>
+              <Text style={{color: COLORS.white, ...FONTS.body4}}>4.8</Text>
             </View>
           </View>
           {/* รายละเอียดหนัง */}
@@ -220,33 +214,30 @@ const Videos = ({ navigation }) => {
           <View>
             <View style={styles.sectionStyle1}>
               <TextInput
-                style={{ flex: 1, color: "white" }}
+                style={{flex: 1, color: 'white'}}
                 placeholder="Comment"
                 placeholderTextColor="#CACACA"
               />
-              <TouchableOpacity style={{ flexDirection: "row" }}>
+              <TouchableOpacity style={{flexDirection: 'row'}}>
                 <Text
-                  style={{ color: "#666666", fontWeight: "bold", marginEnd: 5 }}
-                >
+                  style={{color: '#666666', fontWeight: 'bold', marginEnd: 5}}>
                   Cancel
                 </Text>
               </TouchableOpacity>
-              <TouchableOpacity style={{ flexDirection: "row" }}>
-                <Text style={{ color: "#3D3D3D", fontWeight: "bold" }}>
-                  Post
-                </Text>
+              <TouchableOpacity style={{flexDirection: 'row'}}>
+                <Text style={{color: '#3D3D3D', fontWeight: 'bold'}}>Post</Text>
               </TouchableOpacity>
             </View>
           </View>
         </View>
       </ScrollView>
       {/* คอมเมนต์คนอื่น */}
-      <View style={{ flex: 1 }}>
+      <View style={{flex: 1}}>
         <FlatList
           showsHorizontalScrollIndicator={false}
           data={newMovies}
-          keyExtractor={(item) => item.id.toString()}
-          renderItem={({ item, index }) => renderCommentLists(item, index)}
+          keyExtractor={item => item.id.toString()}
+          renderItem={({item, index}) => renderCommentLists(item, index)}
         />
       </View>
     </SafeAreaView>
@@ -258,60 +249,59 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   sectionStyle: {
-    flexDirection: "row",
-    justifyContent: "center",
-    alignItems: "center",
-    /* backgroundColor: "black", */
+    flexDirection: 'row',
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: 'black',
     borderWidth: 0.5,
-    /* borderColor: "white", */
+    borderColor: '#000',
     height: 40,
     width: 165,
-    marginLeft: 80,
     borderRadius: 5,
     margin: 10,
-    borderBottomColor: "white",
+    borderBottomColor: 'white',
   },
   sectionStyle1: {
     flex: 1,
-    flexDirection: "row",
-    justifyContent: "center",
-    alignItems: "center",
+    flexDirection: 'row',
+    justifyContent: 'center',
+    alignItems: 'center',
     /* backgroundColor: "black", */
     borderWidth: 0.5,
     /* borderColor: "red", */
     height: 40,
     margin: 15,
-    borderBottomColor: "white",
+    borderBottomColor: 'white',
   },
   boxText: {
-    flexDirection: "row",
-    justifyContent: "flex-start",
+    flexDirection: 'row',
+    justifyContent: 'flex-start',
     height: 40,
     /* backgroundColor: "black", */
     marginTop: 10,
     borderWidth: 1,
-    borderBottomColor: "#707070",
+    borderBottomColor: '#707070',
   },
   titleText: {
-    color: "white",
+    color: 'white',
     marginLeft: 10,
     fontSize: 20,
-    fontWeight: "bold",
+    fontWeight: 'bold',
   },
   detailText: {
-    color: "white",
+    color: 'white',
     fontSize: 16,
     marginLeft: 10,
     marginBottom: 10,
   },
   boxdetailText: {
     flex: 1,
-    flexDirection: "row",
-    justifyContent: "flex-start",
+    flexDirection: 'row',
+    justifyContent: 'flex-start',
     /* backgroundColor: "black", */
     marginTop: 10,
     borderWidth: 1,
-    borderBottomColor: "#707070",
+    borderBottomColor: '#707070',
   },
 });
 

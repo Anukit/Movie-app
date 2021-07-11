@@ -258,46 +258,46 @@ const Home = ({navigation}) => {
           onPress={onPressTouch}>
           Movies
         </Text>
-
         <Text style={{color: 'red', marginTop: 7, fontWeight: 'bold'}}>TH</Text>
-
-        <View style={styles.sectionStyle}>
-          <TextInput
-            style={{flex: 1, color: 'white'}}
-            placeholder="Search"
-            placeholderTextColor="#CACACA"
-            //underlineColorAndroid="white"
-            //onChangeText={onChangeText}
-            //value={text}
-          />
-          <Icon
-            name="search"
-            type="FontAwesome"
-            color="#CACACA"
-            size={20}
-            onPress={() => {
-              console.log('Focus on pressed');
-            }}
-          />
-        </View>
-        <View
-          style={{
-            flex: 1,
-            alignItems: 'flex-end',
-            justifyContent: 'center',
-            marginRight: 10,
-          }}>
-          <Icon
-            name="person"
-            type="Ionicons"
-            color="#CACACA"
-            size={30}
-            onPress={() => {
-              /* console.log('Focus on pressed'); */
-              console.log(newMovies);
-            }}
-          />
-        </View>
+        {/* ช่อง Search */}
+          <View style={styles.sectionStyle}>
+            <TextInput
+              style={{flex: 1, color: 'white'}}
+              placeholder="Search"
+              placeholderTextColor="#CACACA"
+              //underlineColorAndroid="white"
+              //onChangeText={onChangeText}
+              //value={text}
+            />
+            <Icon
+              name="search"
+              type="FontAwesome"
+              color="#CACACA"
+              size={20}
+              onPress={() => {
+                console.log('Focus on pressed');
+              }}
+            />
+          </View>
+          {/* โปรไฟล์ */}
+          <View
+            style={{
+              flex: 1,
+              alignItems: 'flex-end',
+              justifyContent: 'center',
+              marginRight: 10,
+            }}>
+            <Icon
+              name="person"
+              type="Ionicons"
+              color="#CACACA"
+              size={30}
+              onPress={() => {
+                /* console.log('Focus on pressed'); */
+                console.log(newMovies);
+              }}
+            />
+          </View>
       </View>
 
       <ScrollView
@@ -328,9 +328,7 @@ const Home = ({navigation}) => {
                 }}>
                 <View style={{flexDirection: 'row'}}>
                   <Text style={{color: COLORS.white, ...FONTS.h2}}>หนัง</Text>
-                  <Text style={{color: '#D21515', ...FONTS.h2, marginTop: 2}}>
-                    ใหม่
-                  </Text>
+                  <Text style={{color: '#D21515', ...FONTS.h2}}>ใหม่</Text>
                 </View>
 
                 <TouchableOpacity
@@ -527,7 +525,6 @@ const styles = StyleSheet.create({
     borderColor: '#000',
     height: 40,
     width: 165,
-    marginLeft: 80,
     borderRadius: 5,
     margin: 10,
     borderBottomColor: 'white',

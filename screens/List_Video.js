@@ -17,7 +17,7 @@ import {Icon} from 'react-native-elements/dist/icons/Icon';
 import {Home} from '.';
 
 const List_Video = ({navigation}) => {
-  const numColumns = 2;
+  const numColumns = 3;
   const [cartoons, setcartoons] = React.useState([
     {
       id: 0,
@@ -61,11 +61,32 @@ const List_Video = ({navigation}) => {
       favourite: false,
       score: '4.0',
     },
+    {
+      id: 6,
+      name: 'cartoon 4',
+      img: images.cartoon4,
+      favourite: false,
+      score: '4.0',
+    },
+    {
+      id: 7,
+      name: 'cartoon 4',
+      img: images.cartoon4,
+      favourite: false,
+      score: '4.0',
+    },
+    {
+      id: 8,
+      name: 'cartoon 4',
+      img: images.cartoon4,
+      favourite: false,
+      score: '4.0',
+    },
   ]);
 
   function renderMoviesLists(item, index) {
     return (
-      <View style={{}}>
+     <SafeAreaView /* style={{height: "100%", width: "100%"}} */>
         <TouchableOpacity
           onPress={() => {
             navigation.navigate('Videos');
@@ -74,13 +95,13 @@ const List_Video = ({navigation}) => {
             source={item.img}
             resizeMode="contain"
             style={{
-              width: 200,
-              height: 300,
+              width: 110,
+              height: 160,
               borderRadius: 15,
             }}
           />
         </TouchableOpacity>
-      </View>
+        </SafeAreaView>
     );
   }
 
@@ -103,21 +124,16 @@ const List_Video = ({navigation}) => {
           }}
           onPress={() => {
             navigation.navigate('Home');
-            /* console.log(thaiMovies); */
           }}>
           Movies
         </Text>
-
         <Text style={{color: 'red', marginTop: 7, fontWeight: 'bold'}}>TH</Text>
-
+        {/* ช่อง Search */}
         <View style={styles.sectionStyle}>
           <TextInput
             style={{flex: 1, color: 'white'}}
             placeholder="Search"
             placeholderTextColor="#CACACA"
-            //underlineColorAndroid="white"
-            //onChangeText={onChangeText}
-            //value={text}
           />
           <Icon
             name="search"
@@ -129,6 +145,7 @@ const List_Video = ({navigation}) => {
             }}
           />
         </View>
+        {/* โปรไฟล์ */}
         <View
           style={{
             flex: 1,
@@ -143,7 +160,6 @@ const List_Video = ({navigation}) => {
             size={30}
             onPress={() => {
               console.log('Focus on pressed');
-              /* console.log(Home); */
             }}
           />
         </View>
@@ -151,7 +167,15 @@ const List_Video = ({navigation}) => {
 
       {/* การ์ตูน */}
       <View style={{justifyContent: 'center', alignItems: 'center'}}>
-      <Text style={{color: "white", ...FONTS.h2, marginTop: 5, fontWeight: 'bold',}}>การ์ตูน</Text>
+        <Text
+          style={{
+            color: 'white',
+            ...FONTS.h2,
+            marginTop: 5,
+            fontWeight: 'bold',
+          }}>
+          การ์ตูน
+        </Text>
       </View>
       <View
         style={{
@@ -182,7 +206,6 @@ const styles = StyleSheet.create({
     borderColor: '#000',
     height: 40,
     width: 165,
-    marginLeft: 80,
     borderRadius: 5,
     margin: 10,
     borderBottomColor: 'white',
